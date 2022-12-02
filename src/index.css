@@ -15,3 +15,14 @@ body {
   background-size: cover;
   max-height: 240px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .bg {
+    width: unset;
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    width: 483px;
+    height: 100vh;
+    max-height: 100%;
+  }
+}

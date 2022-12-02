@@ -93,7 +93,7 @@ export default function Form({
   return (
     <>
       <form
-        className="max-w-xl flex flex-col gap-5 mt-24 mx-auto"
+        className="max-w-xl flex flex-col gap-5 mt-24 mx-auto lg:align-middle lg:justify-center lg:mt-0"
         onSubmit={submitHandler}
       >
         <div className="flex flex-col text-xs gap-2.5">

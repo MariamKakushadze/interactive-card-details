@@ -19,7 +19,7 @@ export default function Submited({
   };
   return (
     <>
-      <form className="max-w-xl flex flex-col gap-5 mt-20 mx-auto">
+      <form className="max-w-xl flex flex-col gap-5 mt-20 mx-auto lg:align-middle lg:justify-center lg:mt-0">
         <div className="flex flex-col text-xs gap-5 text-center">
           <img src={done} alt="" className="w-20 h-20 mx-auto" />
           <h2
