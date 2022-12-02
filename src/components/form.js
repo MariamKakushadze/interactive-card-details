@@ -20,7 +20,7 @@ export default function Form({
   const [cvcError, setCvcError] = useState("");
 
   const nameVal = function () {
-    let format = /^[a-z][a-z\s]*$/;
+    let format = /^[a-z ,.'-]+$/i;
     if (holdersName === "") {
       setError("Can’t be blank");
     } else if (!format.test(holdersName)) {
