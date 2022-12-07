@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import InputMask from "react-input-mask";
 
 export default function Form({
   setCompleted,
@@ -32,7 +33,7 @@ export default function Form({
   const cardVal = function () {
     if (cardNumber === "") {
       setCardError("Can’t be blank");
-    } else if (cardNumber.length !== 16) {
+    } else if (cardNumber.length !== 19) {
       setCardError("Wrong format");
     } else {
       setCardError("");
@@ -111,8 +112,7 @@ export default function Form({
         </div>
         <div className="flex flex-col text-xs gap-2.5">
           <label>CARD NUMBER</label>
-          <input
-            type="number"
+          <InputMask
             placeholder="e.g. 1234 5678 9123 0000"
             className="pl-4 w-80 h-11 rounded-lg border border-[#DFDEE0] outline-none focus:outline-[#6348FE] outline-1 outline-offset-0"
             style={
@@ -120,8 +120,10 @@ export default function Form({
                 ? { borderColor: "red" }
                 : { borderColor: "#DFDEE0" }
             }
+            mask="9999 9999 9999 9999"
+            maskchar=" "
             onChange={(e) => setCardNumber(e.target.value)}
-          ></input>
+          ></InputMask>
           <p className="text-red-500">{cardError}</p>
         </div>
         <div className="flex gap-4">
